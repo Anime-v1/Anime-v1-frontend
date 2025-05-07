@@ -17,6 +17,10 @@ export const AdminPage = () => {
         navigate("/admin/categories");
     };
 
+    const goToEpisodes = () => {
+        navigate("/admin/episodes");
+    }
+
     const gotoVideo = ()=>{
         navigate("/admin/videos");
     }
@@ -44,6 +48,14 @@ export const AdminPage = () => {
                             sx={{ fontSize: 12 }}
                         >
                             Quản lý Phim
+                        </Button>
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            onClick={goToEpisodes}
+                            sx={{ fontSize: 12 }}
+                        >
+                            Quản lý Tập
                         </Button>
                         <Typography variant="body1" sx={{ fontSize: 14 }}>
                             Xin chào, <strong>{username}</strong>

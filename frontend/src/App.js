@@ -8,6 +8,7 @@ import {RequireAdmin} from "./component/RequireAdmin";
 import {AdminCategories} from "./component/AdminCategories";
 import {AdminVideos} from "./component/AdminVideos";
 import {ToastContainer} from "react-toastify";
+import {AdminEpisodes} from "./component/AdminEpisode";
 function App() {
   return (
     <div className="App">
@@ -35,6 +36,14 @@ function App() {
                     element={
                         <RequireAdmin>
                            <AdminVideos/>
+                        </RequireAdmin>
+                    }
+                />
+                <Route
+                    path="/admin/episodes"
+                    element={
+                        <RequireAdmin>
+                            <AdminEpisodes />
                         </RequireAdmin>
                     }
                 />

@@ -20,6 +20,15 @@ export const createVideo = async (videoData) => {
         throw error;
     }
 };
+export const getVideoById = async (id) => {
+    try {
+        const response = await axios.get(`${API_URL}/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error("Lỗi khi lấy video theo ID:", error);
+        return null;
+    }
+};
 export const updateVideo = async (id, videoData) => {
     try {
         const response = await axios.put(`${API_URL}/${id}`, videoData);
